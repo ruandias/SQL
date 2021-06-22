@@ -1,0 +1,14 @@
+USE [Curso]
+
+
+CREATE TABLE[Aluno](
+    [Id] INT NOT NULL UNIQUE,
+    [Nome] NVARCHAR(80) NOT NULL,
+    [Email] NVARCHAR(180) NOT NULL UNIQUE,
+    [Nascimento] DATETIME NULL,
+    [Active] BIT DEFAULT(0)
+)
+GO
+
+ALTER TABLE[Aluno]
+    ALTER COLUMN [Active] BIT NOT NULL
